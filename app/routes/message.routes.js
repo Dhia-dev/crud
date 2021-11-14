@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-    var messages = require('../controllers/message.controller.js');
+    var messages = require('../controllers/message.controllers.js');
 
     // Create a new message
     app.post('/messages',messages.create);

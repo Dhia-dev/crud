@@ -35,6 +35,9 @@ app.get('/', function(req, res){
 
 require('./app/routes/user.routes.js')(app);
 require('./app/routes/message.routes.js')(app);
+require('./app/routes/payement.routes.js')(app);
+require('./app/routes/like.routes.js')(app);
+require('./app/routes/chat.routes.js')(app);
 
 
 // listen for requests

@@ -1,4 +1,4 @@
-var Message = require('../models/message.model.js');
+var Message = require('../models/message.models');
 
 exports.create = (req, res) => {
  
@@ -48,20 +48,20 @@ exports.findOne = function(req, res) {
 
 exports.update = function(req, res) {
     
-    Message.findById(req.params.messageId, function(err, messages) {
+    Message.findById(req.params.messageId, function(err, message) {
         if(err) {
             res.status(500).send({message: "Could not find a messages with id " + req.params.messageId});
         }
 
-        messages.seen = req.body.seen;
-        messages.senderId = req.body.senderId;
-        messages.receiverID = req.bodyreceiverID;
-        messages.sentDate = req.body.sentDate;
-        messages.seenDate = req.body.seenDate;
+        message.seen = req.body.seen;
+        message.senderId = req.body.senderId;
+        message.receiverID = req.body.receiverID;
+        message.sentDate = req.body.sentDate;
+        message.seenDate = req.body.seenDate;
         
 
 
-        messages.save(function(err, data){
+        message.save(function(err, data){
             if(err) {
                 res.status(500).send({message: "Could not update messages with id " + req.params.messagesId});
             } else {
