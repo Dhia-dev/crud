@@ -11,22 +11,19 @@ Clone the project
   git clone https://github.com/Dhia-dev/crud/tree/master
 ```
 
-Go to the project directory
 
-```bash
-  cd my-project
-```
 
-Install dependencies
+`*Go to the project directory
 
-```bash
-  npm install
-```
+cd + Project Directory
 
-Start the server
+*Install dependencies
 
-```bash
-  npm run start
+npm install
+
+*Start the server
+
+npm run start
 ```
 
 
@@ -35,7 +32,7 @@ Start the server
 Install my-project with npm
 
 ```bash
-  npm install my-project
+  npm install 
   cd my-project
 ```
     
